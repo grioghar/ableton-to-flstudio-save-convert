@@ -309,6 +309,8 @@ class EndToEndTests(unittest.TestCase):
         self.assertEqual(s.channels[0]["sample"], os.path.abspath(copied))
 
     def test_pyflp_roundtrip_if_available(self):
+        if sys.version_info >= (3, 11):
+            self.skipTest("PyFLP 2.x only works on Python <= 3.10 (enum incompatibility)")
         try:
             import pyflp  # noqa: F401
         except Exception:

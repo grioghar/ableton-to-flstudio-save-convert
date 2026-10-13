@@ -101,7 +101,7 @@ python -m unittest discover -s tests -v
 The suite builds a synthetic Live Set exercising loops, start offsets, Drum Racks,
 VST2/VST3 instruments, warped audio, sends, groups, mutes and locators, converts
 it, and reads the `.flp` back. If [PyFLP](https://github.com/demberto/PyFLP) is
-installed (Python ≤ 3.11), an extra test round-trips the file through it as well.
+installed (it only works on Python ≤ 3.10), an extra test round-trips the file through it as well.
 
 ## Notes and caveats
 
